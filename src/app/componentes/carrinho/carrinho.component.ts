@@ -12,4 +12,7 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  finalizarCompra(){}
+
 }
