@@ -24,4 +24,24 @@ export class CarrinhoService {
     }
     console.log("CARRINHO: ", this.carrinho);
   }
+  get total() {
+    return this.carrinho.itens
+      .map((item: ItemCarrinho) => item.produto.preco * item.quantidade)
+      .reduce((acc: number, preco: number) => acc + preco);
+  }
+
+  get quantidade() {
+    if(this.carrinho.itens.length === 0){
+      return 0;
+    }
+    return this.carrinho.itens
+      .map((item: ItemCarrinho) => item.quantidade)
+      .reduce((acc: number, quantidade: number) => acc + quantidade);
+  }
+
+  get itens(){
+    return this.carrinho.itens;
+  }
+
 }
+
