@@ -3,11 +3,13 @@
   }
   .td-col {
     vertical-align: middle;
+    cursor: pointer;
   }
   .td-preco {
     text-align: right;
     font-weight: bold;
     padding-right: 20px;
+    cursor: pointer;
   }
   
   .total {
@@ -15,6 +17,7 @@
     font-weight: bold;
     padding-right: 20px;
     font-size: 20px;
+    cursor: pointer;
   }
   
   .titulo {
