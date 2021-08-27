@@ -18,6 +18,10 @@ export class CarrinhoComponent implements OnInit {
 
   }
 
+  removerCarrinho(id: number){
+    this.carrinhoService.remover(id);
+  }
+
   get itens(){
     return this.carrinhoService.itens;
   }
