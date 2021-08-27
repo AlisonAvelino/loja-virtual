@@ -1,0 +1,37 @@
+.td-img {
+    width: 100px;
+  }
+  .td-col {
+    vertical-align: middle;
+  }
+  .td-preco {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 20px;
+  }
+  
+  .total {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 20px;
+    font-size: 20px;
+  }
+.mask-custom {
+    backdrop-filter: blur(15px);
+    background-color: rgba(41, 41, 41, 0.2);
+    border-radius: 2em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.txt-input {
+    margin-top: 10px;
+  }
+  
+  .btn-pagar {
+    margin-top: 10px;
+    width: 100%;
+  }
