@@ -10,7 +10,11 @@ export class CarrinhoService {
 
   private carrinho: Carrinho = new Carrinho([]);
 
-  constructor() { }
+  constructor() { 
+    if ( localStorage['carrinho']){
+      this.carrinho.itens = JSON.parse(localStorage['carrinho']);
+    } 
+  }
 
   adicionar(produto: Produto) {
     const index = this.carrinho.itens.findIndex(
@@ -23,6 +27,7 @@ export class CarrinhoService {
       this.carrinho.itens.push(item);
     }
     console.log("CARRINHO: ", this.carrinho);
+    localStorage['carrinho'] = JSON.stringify(this.carrinho.itens);
   }
   remover(id: number) {
     const index = this.carrinho.itens.findIndex(
@@ -38,6 +43,7 @@ export class CarrinhoService {
     } else {
       this.carrinho.itens[index].quantidade--;
     }
+    localStorage['carrinho'] = JSON.stringify(this.carrinho.itens);
   }
 
   get total() {
